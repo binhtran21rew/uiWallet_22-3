@@ -1,0 +1,14 @@
+@use '../../../scss/' as *;
+
+
+.BlockToken {
+    padding: 50px 0;
+    .BlockToken_name{
+        text-transform: capitalize;
+        font-size: 18px;
+    }
+
+    .BlockToken_price{
+        font-size: 25px;
+    }
+}

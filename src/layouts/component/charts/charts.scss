@@ -1,0 +1,20 @@
+@use '../../../scss/' as *;
+
+.Charts{
+    width: 100px;
+    height: 100px;
+
+    @include screen_mobile{
+        justify-content: right;
+
+
+
+    }
+    .Chart_wrapper{
+        width: 100% ;
+    }
+    .AreaChart{
+        width: 100px;
+        height: 2000px;
+    }
+}

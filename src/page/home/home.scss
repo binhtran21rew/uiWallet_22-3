@@ -1,0 +1,35 @@
+@use '../../scss/' as *;
+
+.Home {
+  position: relative;
+  height: 100%;
+
+  .BlockNavTop{
+    position: fixed;
+    top: 30px;
+    left: 35px;
+  }
+  .BlockToken_wrapper {
+    width: 100%;
+    position: fixed;
+    padding: $margin;
+    bottom: 30%;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &.expanded {
+      height: auto;
+      cursor: default;
+    }
+  }
+  
+  .Block_navBar {
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    padding: $margin;
+
+  }
+}
+

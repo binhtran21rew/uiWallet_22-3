@@ -1,0 +1,135 @@
+@use '../../../scss/' as *;
+
+.BlockUpdateToken{
+    
+    height: 100%;
+    border: 1px solid $color-white;
+    border-radius: 25px;
+    overflow: hidden;
+    user-select: none; 
+    @include screen_mobile{
+        height: 180px;
+        margin: 15px 10px;
+    }
+
+
+    .BlockUpdateToken_box{
+        background: $background-color-white; /* Light white overlay */
+        backdrop-filter: blur(8px);
+    }
+    .Block_wrapper_right, .Block_wrapper_left{
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 10px 20px;
+
+        .Block_wrapper_top{
+            .name{
+                font-size: 25px;
+                @include screen_mobile{
+                    font-size: 18px;
+
+                }
+                text-transform: capitalize;
+            }
+
+            .detail{
+                align-items: center;
+                span{
+                    font-size: 12px;
+                    @include screen_mobile{
+                        font-size: 8px;
+    
+                    }
+                    text-transform: uppercase;
+                }
+                .dot{
+                    content: " ";
+                    width: 4px;
+                    height: 4px;
+                    @include screen_mobile{
+                        width: 3px;
+                        height: 3px;
+    
+                    }
+                    background-color: $color-black;
+                    border-radius: 100%;
+                    margin: 6px;
+                }
+            }
+        }
+        .Block_wrapper_bottom{
+            margin-top: 25px;
+            display: flex;
+
+            .half-right-box {
+                width: 0;
+                height: 0;
+                border-right: 8px solid ;
+                border-bottom: 8px solid transparent;
+                margin: 6px;
+            }
+            .half-left-box{
+                width: 0;
+                height: 0;
+                border-right: 8px solid ;
+                border-top: 8px solid transparent;
+                margin: 6px;
+            }
+            .name{
+                font-size: 25px;
+                text-transform: capitalize;
+            }
+            .pairValue{
+                align-items: center;
+                span{
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+                .dot{
+                    content: " ";
+                    width: 5px;
+                    height: 5px;
+                    background-color: $color-black;
+                    border-radius: 100%;
+                    margin: 6px;
+                }
+            }
+        }
+    }
+    .Block_wrapper_right{
+        justify-content: center;
+        @include screen_mobile{
+            justify-content: space-around;
+        }
+    }
+    .Block_wrapper_left{
+        height: 100%;
+        padding: 0;
+
+        .Block_wrapper_top {
+            padding: 10px 20px;
+            text-align: center;
+            @include screen_mobile{
+                padding: 20px 20px 0 20px;
+                text-align: right;
+                height: 75px;
+                
+            }
+        }
+        .Block_wrapper_bottom {
+            // margin-top: 0;
+            margin: 0 10px 0 20px;
+            display: block;
+            justify-content: center;
+            @include screen_mobile{
+                justify-content: right;
+            }
+            .Block_chart{
+                width: 100%;
+            }
+        }
+    }
+
+}

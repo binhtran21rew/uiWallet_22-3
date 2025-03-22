@@ -1,0 +1,25 @@
+@use '../../scss/' as *;
+
+.Cart{
+    position: relative;
+    height: 100%;
+    .Block_Top{
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      padding: 0 40px;
+    }
+    .Block_wallet{
+      position: absolute;
+      top: 22%;
+      left: 13%;
+    }
+    .Block_navBar {
+        width: 100%;
+        position: absolute;
+        bottom: 3%;
+        padding: $margin;
+    
+      }
+}

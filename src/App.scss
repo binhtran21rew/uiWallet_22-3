@@ -1,0 +1,58 @@
+@use './scss/' as *;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Root{
+    position: relative;
+    background: url($backgroundImage);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    .page{
+        height: 100vh;
+    }
+
+
+    &_left{
+        position: absolute;
+        top: 30%;
+        left: -55%;
+        background: url($backgroundImageLeft);
+        width: 238px;
+        height: 350px;
+        border-radius: 32px;
+    }
+
+    &_right{
+        position: absolute;
+        top: 30%;
+        right: -55%;
+        background-color: rgba(73, 221, 105, 1);
+        width: 238px;
+        height: 350px;
+        border-radius: 32px;
+    }
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+a{
+    text-decoration: none !important;
+    color: $color-black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+

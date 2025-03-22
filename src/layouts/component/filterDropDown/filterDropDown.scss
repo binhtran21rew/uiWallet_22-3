@@ -1,0 +1,39 @@
+@use '../../../scss/' as *;
+
+
+.FilterDropDown{
+    position: absolute;
+    bottom: -7%;
+    left: 15px;
+    text-align: left;
+
+    &_menu{
+
+        background: $background-color-linear-main;
+        width: 100px;
+        border-radius: 10px;
+
+        ul{
+            padding-left: 0;
+
+            li{
+                position: relative;
+                color: $color-white;
+                text-transform: uppercase;
+                padding: 5px 20px;
+                font-size: 12px;
+
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    left: 8%;
+                    bottom: 40%;
+                    width: 4px;
+                    height: 4px;
+                    background-color: $color-white;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
