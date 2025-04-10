@@ -75,3 +75,10 @@
 - NavBar dạng swipe, điều hướng các trang.
 
 ---
+
+## ✨ Các Component Khác
+
+- Dùng để dựng bố cục form, tách code dễ quản lý...
+- Các hiệu ứng chính được xây dựng bằng **GSAP** **ThreeJs** và các thư viện scroll animation hiện đại.
+
+---
