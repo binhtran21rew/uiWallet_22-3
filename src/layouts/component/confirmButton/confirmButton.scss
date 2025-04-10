@@ -1,0 +1,20 @@
+@use '../../../scss/' as *;
+
+.ConfirmButton{
+    height: 56px;
+    div{
+        &:first-child{
+            background-color: #FFFFFF59;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+
+        }
+
+        &:last-child{
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        
+    }
+}

@@ -1,0 +1,50 @@
+.camera-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+  }
+  
+  #reader {
+    width: 100vw;
+    height: 75vh;
+    object-fit: cover;
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .glass-button {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    outline: none;
+
+    span{
+        font-size: 10px;
+    }
+  }
+  
+  .glass-button svg {
+    width: 18px;
+    height: 18px;
+  }
+  

@@ -1,0 +1,59 @@
+@use '../../scss/' as *;
+
+.DetailTransaction{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10% 25px;
+
+
+    &_wrapper{
+        > div {
+            background-color: $background-color-white-blur;
+            margin: 10px 0;
+            border-radius: 15px;
+            &:first-child{
+
+                div{
+
+                    &:first-child{
+                        span{
+                            font-size: 16.5px;
+                            font-weight: 500;
+                        }
+
+                    }
+
+                }
+            }
+
+            > div {
+                position: relative;
+                padding: 10px 10px 20px;
+
+                span{
+                    font-size: 16px;
+                }
+
+                &:not(:last-child){
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 3%;
+                        width: 95%;
+                        height: 1px;
+                        background-color: $color-white;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+
+
+
+}

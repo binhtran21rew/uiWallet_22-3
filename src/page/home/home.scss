@@ -3,33 +3,85 @@
 .Home {
   position: relative;
   height: 100%;
+  .bg_scene{
+    position: absolute;
+  }
 
   .BlockNavTop{
     position: fixed;
     top: 30px;
-    left: 35px;
+    width: 100%;
+    z-index: 9999;
   }
   .BlockToken_wrapper {
     width: 100%;
     position: fixed;
     padding: $margin;
-    bottom: 30%;
+    bottom: 32%;
     transition: height 0.3s ease-in-out;
     overflow: hidden;
-    cursor: pointer;
     
     &.expanded {
       height: auto;
-      cursor: default;
     }
   }
   
   .Block_navBar {
     width: 100%;
     position: absolute;
-    bottom: 3%;
+    bottom: 0;
     padding: $margin;
 
+  }
+
+  .Popup{
+    width: 100%;
+    height: 100%;
+
+    .dayArrow{
+      display: none;
+
+      .dayArrow_wrapper{
+        position: relative;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: 0 0 10px rgba(79, 79, 79, 0.3);
+        margin: 20px 10px 0;
+        border-radius: 18px;
+        overflow: hidden;
+        .progressBg {
+          position: absolute;
+          top: 0;
+          left: -32px;
+          height: 100%;
+          background: linear-gradient(to right, rgba(243, 139, 139, 1),
+          rgba(247, 121, 121, 0.7),
+          rgba(247, 121, 121, .5));
+          z-index: 1;
+          width: 0;
+          transition: width 0.3s;
+          box-shadow: 5px 0 5px rgba(247, 121, 121, .8);
+        }
+        
+        .dayArrow_item{
+          position: relative;
+          padding: 2px 0;
+          z-index: 2;
+
+          &:not(:last-child)::after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background-color: rgba(156, 155, 155, 0.2);
+  
+          }
+    
+        }
+
+      }
+    }
   }
 }
 

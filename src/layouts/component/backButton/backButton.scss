@@ -1,16 +1,10 @@
 @use '../../../scss/' as *;
 .BackButton{
-    position: fixed; 
-    top: 30px;
-    left: 35px;
     border: 1px solid white;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: $background-color-white-blur;
-    z-index: 1;
-    
 }

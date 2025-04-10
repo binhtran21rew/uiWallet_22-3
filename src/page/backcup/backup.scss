@@ -1,0 +1,28 @@
+@use '../../scss/' as *;
+
+.Backup{
+    position: relative;
+    width: 100%;
+    padding: 10% 25px;
+
+    &_wrapper{
+        margin-top: 20px;
+
+        &_tabs{
+            .tabs_list{
+
+                &_item{
+                    color: $background-color-white-blur;
+                    border-bottom: 1px solid $background-color-white-blur;
+                }
+                .react-tabs__tab--selected{
+                    color: $text-white;
+                    background-color: unset;
+                    border-bottom: 1px solid $color-white;
+
+                }
+            }
+        }
+
+    }
+}

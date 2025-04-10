@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 import "./blockUpdateToken.scss";
@@ -7,57 +8,57 @@ import UpdateTokenPrice from "../../../component/UpdateTokenPrice";
 import Charts from "../charts/Charts";
 
 import {addCryptoData, resetCryptoData} from '../../../context/slice/updateCryptoSlice';
-
+import {dataUser, linkToken} from '../../../constant';
 
 function BlockUpdateToken({ ...props }) {
-    const { listToken, ref, isExpanded } = props;
+    const {ref, isExpanded } = props;
     var cryptoSelector = useSelector((state) => state.crypto);
+
+    const navigator = useNavigate();
     
     const dispatch = useDispatch();
     
     const [prevPercentChange, setPrevPercentChange] = useState(0);
-    const [cryptoData, setCryptoData] = useState(UpdateTokenPrice(listToken));
 
     
-    
     useEffect(() => {
-        if(cryptoSelector.data.length === 0) {
-            dispatch(addCryptoData(cryptoData));
-        }
-        
-        
+
         const interval = setInterval(() => {
-            const newCryptoData = UpdateTokenPrice(listToken);
-            setPrevPercentChange(cryptoData.percentChange);
-            setCryptoData(newCryptoData);
+            const newCryptoData = UpdateTokenPrice(dataUser.listToken);
+            setPrevPercentChange(cryptoSelector.data[0].percentChange);
             dispatch(addCryptoData(newCryptoData));
         }, 10000);
         return () => {
             clearInterval(interval)
         };
-    }, [listToken]);
+    }, [cryptoSelector.data[0]]);
+
+
+    const onClick = (id) => {
+        navigator(linkToken, {state: {idToken: id}});
+    }
 
     
 
-    return listToken?.map((item, id) => {
+    return cryptoSelector.data[0].map((item, id) => {
         return (
-            <div key={`${id}.${item}`} className="BlockUpdateToken" ref={(el) => (ref.current[id] = el)}>
-                <div className="BlockUpdateToken_box row h-100">
+            <div key={`${id}`} className="BlockUpdateToken" ref={(el) => (ref.current[id] = el)} onClick={() => onClick(id)}>
+                <div className="BlockUpdateToken_box d-flex h-100">
                     <div className="col-4">
                         <div className="Block_wrapper_right">
                             <div className="Block_wrapper_top">
-                                <span className="name">{item.name}</span>
+                                <span className="name">{item.name.name}</span>
                                 <div className="detail d-flex">
-                                    <span>{item.detail} </span>
+                                    <span>{item.name.detail} </span>
                                     <span className="dot"></span>
-                                    <span>{cryptoData[id].pairValue}</span>
+                                    <span>{item.pairValue}</span>
                                 </div>
                             </div>
                             <div className="Block_wrapper_bottom">
                                 <div
                                     style={{
                                         color:
-                                            cryptoData[id].percentChange >
+                                            item.percentChange >
                                             prevPercentChange
                                                 ? "green"
                                                 : "red",
@@ -66,18 +67,18 @@ function BlockUpdateToken({ ...props }) {
                                     }}
                                 >
                                     <div>
-                                        <span>{cryptoData[id].percentChange}</span>
+                                        <span>{item.percentChange}%</span>
                                     </div>
                                     <div
                                         className={`${
-                                            cryptoData[id].percentChange >
+                                            item.percentChange >
                                             prevPercentChange
                                                 ? "half-right-box"
                                                 : "half-left-box"
                                         }`}
                                         style={{
                                             borderRightColor:
-                                                cryptoData[id].percentChange >
+                                                item.percentChange >
                                                 prevPercentChange
                                                     ? "green"
                                                     : "red",
@@ -85,7 +86,7 @@ function BlockUpdateToken({ ...props }) {
                                     ></div>
                                 </div>
 
-                                <span>${cryptoData[id].valueChange}</span>
+                                <span>${item.valueChange}</span>
                             </div>
                         </div>
                     </div>
@@ -93,10 +94,10 @@ function BlockUpdateToken({ ...props }) {
                         <div className="Block_wrapper_left">
                             <div className="Block_wrapper_top ">
                                 <span className="name">
-                                    ${cryptoData[id].price}
+                                    ${item.price}
                                 </span>
                                 <div className="detail">
-                                    <span>{cryptoData[id].quantity}</span>
+                                    <span>{item.quantity}</span>
                                 </div>
                             </div>
                             <div className="Block_wrapper_bottom ">

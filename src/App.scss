@@ -3,25 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .Root{
     position: relative;
-    background: url($backgroundImage);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    // background: url($backgroundImage);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    height: 100%;
     overflow: hidden;
-    .page{
-        height: 100vh;
-    }
 
 
     &_left{
         position: absolute;
         top: 30%;
-        left: -55%;
+        left: -58%;
         background: url($backgroundImageLeft);
         width: 238px;
         height: 350px;
@@ -31,11 +29,25 @@
     &_right{
         position: absolute;
         top: 30%;
-        right: -55%;
+        right: -58%;
         background-color: rgba(73, 221, 105, 1);
         width: 238px;
         height: 350px;
         border-radius: 32px;
+    }
+
+    &_buttonBackTop{
+        position: fixed; 
+        top: 30px;
+        left: 35px;
+        z-index: 10;
+    }
+
+    &_buttonBack{
+        position: fixed; 
+        bottom: 5%;
+        left: 10%;
+        z-index: 999;
     }
 }
 
@@ -45,7 +57,10 @@ ul, ol {
     list-style: none;
 }
 
-
+p{
+    margin: 0;
+    padding: 0;
+}
 
 a{
     text-decoration: none !important;
@@ -54,5 +69,76 @@ a{
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield; /* Firefox */
+}
+input{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+
+}
+
+.fs-small{
+    font-size: 13px;
+}
+
+.fs-medium{
+    font-size: 16px !important;
+}
+
+.text-label{
+    font-size: 18px;
+    color: $color-white ;
+    text-transform: capitalize;
+}
+
+.text-blur{
+    color: $color-black-blur !important;
+}
+
+.text-black-blur{
+    color: $color-black-blur !important;
+}
+
+
+
+.bg-box{
+    background-color: rgba($color: #ffffff, $alpha: .5);
+}
+
+.bg-white-blur{
+    background-color: $background-color-white-blur;
+}
+
+.bg-button-blur{
+    background-color: $background-color-white;
+    box-shadow: 0 0 20px rgba(137, 137, 137, 0.3);
+    backdrop-filter: blur(50px);
+    border-radius: 50%;
+}
+
+.transak{
+    width: 48px;
+    height: 48px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px
 }
 

@@ -1,0 +1,76 @@
+@use '../../../scss/' as *;
+
+
+.ShowHistory{
+    &_top{
+        z-index: 999;
+        .ShowHistory_search{
+
+            .search{
+                height: 50px;
+                position: relative;
+    
+                > div{
+                    position: absolute;
+                    bottom: 30%;
+                    left: 5%
+                    
+                }
+    
+                input{
+                    width: 100%;  
+                    height: 100%;  
+                    border-radius: 8px; 
+                    background-color: $background-color-white-blur;
+                    padding: 10px 40px;
+                }
+
+            }
+
+            .ShowHistory_filter{
+                background-color: $background-color-white-blur;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+    .ShowHistory_wrapper{
+        pointer-events: auto !important;
+        position: relative;
+        background-color: $background-color-white-blur;
+        padding: 15px 8px;
+        border-radius: 14px;
+        &_icon{
+            position: absolute;
+            right: 2%;
+            top: 40%;
+        }
+        &_item{
+            .item_text{
+                span{
+                    font-size: 18px;
+                }
+            }
+
+            .item_name, .item_info{
+                div{
+                    span{
+                        font-size: 14px;
+                        color: rgb(97, 96, 96);
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    &_popup{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0%;
+        left: 0;
+        z-index: 99999;
+    }
+}

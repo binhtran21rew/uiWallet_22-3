@@ -49,17 +49,16 @@
                 }
 
                 .BlockWallet_box{
-                    // position: relative;
-                    // &::before{
-                    //     content: " ";
-                    //     position: absolute;
-                    //     width: 100%;
-                    //     height: 0.1px;
-                    //     top: 0;
-                    //     left: -15px;
-                    //     background-color: $background-color-white-blur;
-                    //     z-index: 0;
-                    // }
+                    position: relative;
+                    &_dropdown{
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        text-align: left;
+                        width: 100px;
+                        transform: translateX(10%) translateY(10%);
+                        z-index: 1;
+                    }
                 }
             }
 

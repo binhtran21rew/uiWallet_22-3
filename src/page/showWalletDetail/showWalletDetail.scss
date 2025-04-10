@@ -1,0 +1,42 @@
+@use '../../scss/' as *;
+
+.ShowWalletDetail{
+    width: 100%;
+    height: 100%;
+    padding: 15% 0 ;
+
+    .Block_Top{
+        padding: 0 25px;
+        
+    }
+
+    &_wrapper{
+
+        &_item{
+            position: relative;
+            .WalletBlock{
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateX(-4%) translateY(-50%);
+            }
+            .item_option{
+
+                span{
+                    position: relative;
+                    padding: 5px;
+                    &:not(:last-child)::after{
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 22px;
+                        top: 25%;
+                        right: -10%;
+                        background-color: $background-color-black-blur;
+                    }
+                }
+            }
+
+        }
+    }
+}

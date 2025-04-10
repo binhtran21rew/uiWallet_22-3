@@ -32,9 +32,9 @@ function BlockToken({ ...props }) {
         }
         
       }, [isExpanded]);
-    return (
 
-        cryptoSelector.data[0] && (
+      
+    return ( cryptoSelector.data[0] && (
         <div className="BlockToken text-center">
             {/* {cryptoSelector[0]?.map((data, id) => { */}
                 {!isExpanded && 
@@ -49,7 +49,6 @@ function BlockToken({ ...props }) {
                    
                 }
                 {isExpanded &&
-
                         <div className="d-flex flex-column justify-conent-center alaign-item-center">
                             <span className="BlockToken_name">
                                 price
@@ -67,7 +66,6 @@ function BlockToken({ ...props }) {
                         </div>
         
                 }
-            {/* })} */}
         </div>
 
         )

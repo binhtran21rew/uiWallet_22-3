@@ -8,6 +8,8 @@ $backgroundImage: 'https://s3-alpha-sig.figma.com/img/a25d/3a57/1bbfd40b5d4176ad
 $backgroundImageLeft: 'https://s3-alpha-sig.figma.com/img/ea1e/8e38/b42c07a31b10d9594ac9588b9a2295dc?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VDSTip3peOeEYFucEim3lsfaLS0NuM1LNJUAyTjpvf2bqfrX6sQOeLRBkV4G2e7atgC5KiOVuNU6oQuMAhTB5SjQ8Ptl~inPUMt~Kg4Wa0QXvhK4NalRj3RaegEf1r0Jc4g23oBolNba4ori72OI~cKpGK1Zdl20y3QpSHL8Kf~TXc4I2E44KimczPNTMKeCekSbKMNOTGMUojOXEFY4YqdP4msrldOoyOMI0lt4Lh1Ncr2VMoN8Uu~m-BEWf7lcrMSOdGaG~ZEtebEBVZqiPjaTz7iICS2gPznIy98z04OScCsOIPN~MRYNdEVLbYG9Jnl2c9XWdSZSIJJI3nEGsA__';
 $background-color-white: rgba(255, 255, 255, 0.9);
 $background-color-white-blur: rgba(255, 255, 255, 0.4);
+$background-color-black-blur: rgba(79, 79, 79, 0.4);
+
 $background-color-linear-main:  linear-gradient(to bottom, rgba(204, 224, 255, 1), rgba(138, 46, 255, 1));
 $background-color-linear-box: linear-gradient(45deg, rgb(177, 123, 248), rgba(223, 223, 223, 0.2));
 $color-white: white;
@@ -16,3 +18,4 @@ $color-black-blur: rgba($color: #000000, $alpha: .6);
 
 $text-white: white;
 $text-black: black;
+

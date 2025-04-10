@@ -2,21 +2,16 @@
 
 
 .FilterDropDown{
-    position: absolute;
-    bottom: -7%;
-    left: 15px;
-    text-align: left;
-
     &_menu{
-
-        background: $background-color-linear-main;
-        width: 100px;
+        width: 100%;
         border-radius: 10px;
-
         ul{
             padding-left: 0;
+            text-align: center;
 
             li{
+                display: flex;
+                align-items: center;
                 position: relative;
                 color: $color-white;
                 text-transform: uppercase;
@@ -26,7 +21,7 @@
                 &::before{
                     content: " ";
                     position: absolute;
-                    left: 8%;
+                    left: 15%;
                     bottom: 40%;
                     width: 4px;
                     height: 4px;

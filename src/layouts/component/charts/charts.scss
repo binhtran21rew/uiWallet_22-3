@@ -7,14 +7,16 @@
     @include screen_mobile{
         justify-content: right;
 
-
-
     }
     .Chart_wrapper{
         width: 100% ;
+
     }
     .AreaChart{
         width: 100px;
-        height: 2000px;
+        height: 200px;
     }
+
+      
+
 }

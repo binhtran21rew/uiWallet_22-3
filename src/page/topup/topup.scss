@@ -1,0 +1,15 @@
+@use '../../scss/' as *;
+.Topup{
+    width: 100%;
+    top: 10%;
+    padding: 10% 25px;
+    height: 100%;
+
+
+    &_button{
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+        width: 80%;
+    }
+}

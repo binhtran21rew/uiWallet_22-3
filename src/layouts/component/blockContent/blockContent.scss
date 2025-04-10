@@ -1,7 +1,39 @@
 @use "../../../scss/" as *;
 
-.BlockContentTop {
+.BlockContent {
     width: 100%;
+    &_wrapper {
+        &_left {
+            span {
+                &:first-child {
+                    font-size: 28px;
+                    text-transform: capitalize;
+                }
+                font-size: 15px;
+                color: $color-white;
+                text-transform: capitalize;
+            }
+        }
+
+        &_right {
+            .BlockContentTop_wrapper_box {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+                width: 35px;
+                height: 35px;
+                border-radius: 12px;
+                background-color: $background-color-white-blur;
+
+
+            }
+        }
+    }
+}
+
+.BlockContentInfo {
     &_wrapper {
         &_blur {
             background-color: $background-color-white-blur;
@@ -9,7 +41,7 @@
             padding: 8px;
         }
         &_left {
-            .BlockContentTop_text {
+            .BlockContentInfo_text {
                 span {
                     &:first-child {
                         font-size: 16px;
@@ -19,6 +51,7 @@
                     font-size: 12px;
                     color: $color-black-blur;
                     text-transform: capitalize;
+
                 }
             }
             span {
@@ -33,7 +66,8 @@
         }
 
         &_right {
-            .BlockContentTop_wrapper_box {
+            .BlockContentInfo_wrapper_box {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -42,34 +76,24 @@
                 height: 35px;
                 border-radius: 12px;
                 background-color: $background-color-white-blur;
+
             }
         }
     }
+}
 
-    &_body {
-        .BlockContentTop_title {
-            div {
-                position: relative;
-                .iconeye {
-                    position: absolute;
-                    right: 15%;
-                }
-                span {
-                    font-size: 18px;
-                    color: $color-white;
-                }
-                &:last-child {
-                    span {
-                        font-size: 38px;
-                        color: $color-white;
-                    }
-                }
-            }
-        }
+.BoxInput{
+    // background-color: $background-color-white-blur;
+    border-radius: 12px;
+    padding: 0 18px;
+    position: relative;
+    &.error{
+        border: 1px solid red;
     }
 
-    .BlockContentTop_swiper {
-        margin-top: 20px;
-
+    &_error{
+        position: absolute;
+        bottom: 0;
+        transform: translateY(100%);
     }
 }

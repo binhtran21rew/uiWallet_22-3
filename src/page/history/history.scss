@@ -1,0 +1,22 @@
+@use '../../scss/' as *;
+
+.History{
+    position: relative;
+    width: 100%;
+    padding: 15% 25px;
+    height: 100%;
+    
+    .Block_Top{
+
+    }
+
+    .Report_wrapper{
+        .tabs_list{
+
+            &_item{
+                background-color: transparent;
+                border: 1px solid $background-color-white;
+            }
+        }
+    }
+}

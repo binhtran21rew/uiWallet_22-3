@@ -1,0 +1,44 @@
+/* Make keyboard full width */
+.custom-keyboard {
+    width: 90%;
+    margin: auto;
+  }
+  .hg-theme-default{
+    background-color: #D1D3D9;
+  }
+  /* Style keys */
+.hg-button {
+  font-size: 24px;
+  font-weight: bold;
+  background: #d1d3d9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 40px !important; /* Adjust key width */
+  height: 40px !important; /* Adjust key height */
+  text-transform: none;
+
+  &[data-skbtn="{emptybksp}"] {
+    background-color: #D1D3D9;
+    border: unset;
+  }
+  &[data-skbtn="{bksp}"] {
+    background-color: #D1D3D9;
+    border: unset;
+  }
+}
+  button
+  /* Style the backspace key */
+  .hg-button.hg-standardBtn.hg-button-bksp {
+    background: #e0e0e0;
+    width: 100px;
+    height: 70px;
+  }
+  
+  /* Make keyboard container centered */
+  .keyboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  

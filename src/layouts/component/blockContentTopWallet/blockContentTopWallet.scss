@@ -1,0 +1,33 @@
+@use "../../../scss/" as *;
+
+.BlockContentTopWallet {
+    width: 100%;
+
+
+    &_body {
+        .BlockContentTopWallet_title {
+            div {
+                position: relative;
+                .iconeye {
+                    position: absolute;
+                    right: 15%;
+                }
+                span {
+                    font-size: 18px;
+                    color: $color-white;
+                }
+                &:last-child {
+                    span {
+                        font-size: 38px;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .BlockContentTopWallet_swiper {
+        margin-top: 20px;
+
+    }
+}
