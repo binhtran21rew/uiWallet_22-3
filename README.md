@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Nạp/Rút Wallet 2024
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Tổng Quan Dự Án
 
-## Available Scripts
+**Tên dự án**: Nạp/Rút Wallet 2024  
+**Mô tả ngắn**: Xây dựng UI animation cho ví điện tử.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 2. Cấu Trúc Thư Mục
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Thư mục chính `src/`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **assets/**: Chứa ảnh và các animation ảnh.
+- **component/**: Chứa các function tạo dữ liệu giả, các icon, và các function dùng cho Three.js.
+- **context/**: Chứa file Redux dùng để lưu trữ dữ liệu.
+- **layouts/**: Chứa các component được tái sử dụng trong toàn bộ web.
+- **page/**: Chứa các trang hiển thị.
+- **scss/**: Chứa các file SCSS cấu hình cho web, bao gồm biến, breakpoint và frame.
 
-### `npm test`
+### Bên trong thư mục `layouts/`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **component/**: Lưu các component tái sử dụng.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 3. Mô Tả Một Số File Component
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `BlockContent`
+- Tạo các block bố cục chứa nội dung.
+- Nhận vào:
+  - `type`: Dạng block nội dung.
+  - `listBox`: Mảng chứa nội dung cần hiển thị.
+  - `onInputChange`: Hàm thay đổi dữ liệu nhập.
+  - `showId`, `setShowId`: Sử dụng ID để truy xuất nội dung.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `BlockContentTopWallet`
+- Kết hợp với `BlockContent` để hiển thị thông tin ví, token hiện có.
 
-### `npm run eject`
+### `BlockFilter`
+- Tạo form tìm kiếm.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `Image`
+- Chứa hình động sử dụng trong Three.js.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `NumericKeyBoard`
+- Tạo bàn phím số tùy chỉnh dành cho mobile.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Charts`
+- Tạo biểu đồ.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `Popup`
+- Tạo form dạng popup để hiển thị nội dung.
+- Nhận vào:
+  - `isAlert`: Kiểm tra popup dạng thông báo.
+  - `isOpen`, `setIsOpen`: Bật/tắt popup.
+  - `button`: Có thể truyền vào nút bấm.
+  - `listAlert`: Mảng nội dung hiển thị.
+  - `onClick`: Sự kiện click của button.
 
-## Learn More
+### `ShowHistory`
+- Hiển thị danh sách giao dịch của ví.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `ScanQR`
+- Cho phép sử dụng camera để quét QR.
+- Nhận vào:
+  - `setScannedResult`: Set giá trị sau khi quét.
+  - `isScanning`, `setIsScanning`: Kiểm soát quá trình scan.
+  - `button`, `onClick`: Tùy chỉnh button và sự kiện.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `FormOTP`
+- Tạo form nhận OTP sau giao dịch.
 
-### Code Splitting
+### `SwiperNav`
+- NavBar dạng swipe, điều hướng các trang.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
